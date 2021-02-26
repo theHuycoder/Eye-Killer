@@ -65,6 +65,9 @@ window.onload = () => {
             case "very extreme":
                 randomOpacity = getRandomNumber(0.8,0.9);
                 break;
+            case "hell":
+                randomOpacity =getRandomNumber(0.9,0.95);
+                break;
             default:
                 break;
         }
@@ -101,8 +104,10 @@ window.onload = () => {
                             gameLoop("hard");
                         }else if (count > 20 && count <=25){
                             gameLoop("extreme");
-                        }else if (count > 25){
+                        }else if (count > 25 && count <=35){
                             gameLoop("very extreme");
+                        }else {
+                            gameLoop("hell");
                         }
                     }, 1000)
                 })
