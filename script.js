@@ -6,7 +6,7 @@ window.onload = () => {
     const wrapper = document.querySelector("#wrapper");
     const timer = document.querySelector("#timer");
     const score = document.querySelector("#score");
-    const btnReset = document.getElementById("reset");
+    const reset = document.getElementById("reset");
     let count = 0;// BIEN DEM TINH DIEM
     score.innerHTML = count; // DIEM BAN DAU
 
@@ -41,7 +41,7 @@ window.onload = () => {
             if (seconds === 0) {
                 clearInterval(interval);
                 playField.innerHTML = `<img src="image/loser.jpg"/><div class="final">Được <span class="final-score">${count}</span> điểm nè!</div>`
-                btnReset.style.display = "block";
+                reset.style.display = "block";
             }
             timer.innerHTML = seconds;
         }, 1000);
@@ -114,7 +114,7 @@ window.onload = () => {
             } else {
                 columnsList[i].addEventListener("click", () => {
                     playField.innerHTML = `<img src="image/loser.jpg"/><div class="final">Được <span class="final-score">${count}</span> điểm nè!</div>`
-                    btnReset.style.display = "block";
+                    reset.style.display = "block";
                 })
             }
         }
@@ -127,7 +127,7 @@ window.onload = () => {
         document.body.classList.add("troll-face")
         gameLoop();
     })
-    btnReset.addEventListener("click",()=>{
+    reset.addEventListener("click",()=>{
        location.reload();
     })
 }
